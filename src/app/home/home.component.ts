@@ -14,7 +14,7 @@ import { ActiviteService } from '../services/activite.service';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-  constructor(private monActService: ActiviteService, private monRouter: Router) { }
+  constructor(public monActService: ActiviteService, private monRouter: Router) { }
 
   // Nombre d'éléments à afficher dans le template
   nbItems: number = 4;
