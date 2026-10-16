@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ActiviteService } from '../services/activite.service';
 
 /**
  * Composant HomeComponent (page d'accueil)
@@ -13,7 +14,7 @@ import { Router } from '@angular/router';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-  constructor(private monRouter: Router) { }
+  constructor(private monActService: ActiviteService, private monRouter: Router) { }
 
   // Nombre d'éléments à afficher dans le template
   nbItems: number = 4;
