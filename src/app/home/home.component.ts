@@ -20,4 +20,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.nbItems = this.objectifs.length;
   }
+  ajoutItem(){
+    this.objectifs.push(this.objectifText);
+    this.nbItems = this.objectifs.length; 
+  }
 }
