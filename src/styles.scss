@@ -1,13 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
 
-$main-color: #2ee684;
+$main-color: #1e5e7b;
 
 body {
-    background: $main-color;
-    padding: 3em;
-    font-family: 'Raleway', 'Arial';
-    color: #fff;
+  background: $main-color;
+  padding: 3em;
+  font-family: 'Raleway', 'Arial';
+  color: #fff;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 ul {
