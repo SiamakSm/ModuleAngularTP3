@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 /**
  * Composant HomeComponent (page d'accueil)
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
  */
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -14,4 +15,5 @@ export class HomeComponent {
   // Nombre d'éléments à afficher dans le template
   nbItems: number = 4;
   btnText: string = "Ajouter un item";
+  objectifText : string = '';
 }
