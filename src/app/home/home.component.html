@@ -20,6 +20,8 @@
     </form>
   </div>
   <div class="col">
-    <p class="life-container">Un bloc</p>
+    @for (objectif of objectifs; track objectif) {
+    <p class="life-container">{{objectif}}</p>
+    }
   </div>
 </div>
