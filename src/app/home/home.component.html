@@ -16,7 +16,7 @@
     <form>
       <input type="text" class="txt" name="objectif" [(ngModel)]="objectifText">
       <p>{{objectifText}}</p>
-      <input type="submit" class="btn" [value]="btnText">
+      <input type="submit" class="btn" [value]="btnText" (click)="ajoutItem()">
     </form>
   </div>
   <div class="col">
