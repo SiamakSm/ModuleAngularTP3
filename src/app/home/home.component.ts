@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 /**
  * Composant HomeComponent (page d'accueil)
@@ -12,16 +13,19 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
+  constructor(private monRouter: Router) { }
+
   // Nombre d'éléments à afficher dans le template
   nbItems: number = 4;
   btnText: string = "Ajouter un item";
-  objectifText : string = '';
-  objectifs : string[] = [];
+  objectifText: string = '';
+  objectifs: string[] = [];
   ngOnInit() {
     this.nbItems = this.objectifs.length;
   }
-  ajoutItem(){
+  ajoutItem() {
     this.objectifs.push(this.objectifText);
-    this.nbItems = this.objectifs.length; 
+    this.nbItems = this.objectifs.length;
+    console.log('Router marcheeeeee', this.monRouter)
   }
 }
