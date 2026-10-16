@@ -1,9 +1,8 @@
-<p>consult-activite works!</p>
+<p>Consult-activite Page!</p>
 
-<div>
-    <li>Premier Paramétre : {{monVariableId}}</li>
-    @if (monVariableId2) {
-        <li>Deuxieme Paramétre : {{monVariableId2}}</li>
-    }
-
-</div>
+@if (nomActivite) {
+<p>Detail de l'activité :</p>
+<ol>
+    <li>Nom de l'activité : <strong>{{ nomActivite }}</strong></li>
+</ol>
+}
