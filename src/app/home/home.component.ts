@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 /**
@@ -11,9 +11,13 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   // Nombre d'éléments à afficher dans le template
   nbItems: number = 4;
   btnText: string = "Ajouter un item";
   objectifText : string = '';
+  objectifs : string[] = [];
+  ngOnInit() {
+    this.nbItems = this.objectifs.length;
+  }
 }
