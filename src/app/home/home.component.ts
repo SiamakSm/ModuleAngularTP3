@@ -20,18 +20,19 @@ export class HomeComponent implements OnInit {
   nbItems: number = 4;
   btnText: string = "Ajouter un item";
   objectifText: string = '';
-  objectifs: string[] = [];
+  //objectifs: string[] = [];
+
   ngOnInit() {
-    this.nbItems = this.objectifs.length;
+    this.nbItems = this.monActService.objectifs.length;
   }
   ajoutItem() {
-    this.objectifs.push(this.objectifText);
-    this.nbItems = this.objectifs.length;
+    this.monActService.objectifs.push(this.objectifText);
+    this.nbItems = this.monActService.objectifs.length;
     //console.log('Router marcheeeeee', this.monRouter)
 
-    setTimeout(() => {
-      this.monRouter.navigate(['/about'])
-    }, 2000);
+    //setTimeout(() => {
+    //  this.monRouter.navigate(['/about'])
+    //}, 2000);
 
   }
 }
