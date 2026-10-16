@@ -9,9 +9,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ConsultActiviteComponent {
   monVariableId: string = '';
-  
+  monVariableId2: string = '';
+
   constructor(private monParam: ActivatedRoute){
     this.monVariableId = monParam.snapshot.params['id'];
-    console.log(this.monVariableId);
+    //console.log(this.monVariableId);
+    this.monVariableId2 = monParam.snapshot.params['id2'];
+
   }
 }
