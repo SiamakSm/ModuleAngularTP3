@@ -6,4 +6,8 @@ import { Injectable } from '@angular/core';
 export class ActiviteService {
   objectifs: string[] = [];
   constructor() { }
+
+  removeItem(index: number) {
+    this.objectifs.splice(index, 1);
+  }
 }
