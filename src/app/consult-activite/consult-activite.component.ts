@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ActiviteService } from '../services/activite.service';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-consult-activite',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './consult-activite.component.html',
   styleUrl: './consult-activite.component.scss'
 })
@@ -13,6 +14,7 @@ export class ConsultActiviteComponent {
   monVariableId: string = '';
   monVariableId2: string = '';
   nomActivite: string = '';
+  newNom: string = '';
 
   constructor(private monParam: ActivatedRoute, public monConsultActService: ActiviteService,
     private monRouter: Router) {
@@ -26,6 +28,10 @@ export class ConsultActiviteComponent {
   supprimeElem(index: number) {
     this.monConsultActService.removeItem(index);
     this.monRouter.navigate(['/'])
+  }
 
+  saveElem() {
+    this.monConsultActService.editItem(+this.monVariableId, this.newNom)
+    this.nomActivite = this.newNom;
   }
 }

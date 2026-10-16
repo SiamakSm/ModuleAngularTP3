@@ -6,5 +6,6 @@
     <li>Nom de l'activité : <strong>{{ nomActivite }}</strong></li>
 </ol>
 }
-
 <button (click)="supprimeElem(+monVariableId)">Supprimer</button>
+<button (click)="saveElem()">Sauvegarder</button>
+<input type="text" [(ngModel)]="newNom">

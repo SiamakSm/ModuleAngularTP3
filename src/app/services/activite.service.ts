@@ -10,4 +10,9 @@ export class ActiviteService {
   removeItem(index: number) {
     this.objectifs.splice(index, 1);
   }
+
+  editItem(index: number, newName: string) {
+  this.objectifs[index] = newName;
+}
+
 }
