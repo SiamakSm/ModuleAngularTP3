@@ -26,6 +26,11 @@ export class HomeComponent implements OnInit {
   ajoutItem() {
     this.objectifs.push(this.objectifText);
     this.nbItems = this.objectifs.length;
-    console.log('Router marcheeeeee', this.monRouter)
+    //console.log('Router marcheeeeee', this.monRouter)
+
+    setTimeout(() => {
+      this.monRouter.navigate(['/about'])
+    }, 2000);
+
   }
 }
