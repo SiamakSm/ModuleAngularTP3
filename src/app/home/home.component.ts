@@ -13,4 +13,5 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   // Nombre d'éléments à afficher dans le template
   nbItems: number = 4;
+  btnText: string = "Ajouter un item";
 }
