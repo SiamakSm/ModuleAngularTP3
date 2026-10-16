@@ -20,8 +20,8 @@
     </form>
   </div>
   <div class="col">
-    @for (objectif of monActService.objectifs; track objectif) {
-    <p class="life-container animation-ajout">{{objectif}}</p>
+    @for (objectif of monActService.objectifs; track objectif; let index = $index) {
+    <p class="life-container animation-ajout" (click)="naviger(index)">{{objectif}}</p>
     }
   </div>
 </div>

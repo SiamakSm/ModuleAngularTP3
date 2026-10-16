@@ -33,6 +33,9 @@ export class HomeComponent implements OnInit {
     //setTimeout(() => {
     //  this.monRouter.navigate(['/about'])
     //}, 2000);
+  }
 
+  naviger(index: number){
+    this.monRouter.navigate(['/consultAct', index])
   }
 }
