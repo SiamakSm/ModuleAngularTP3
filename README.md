@@ -1,4 +1,4 @@
-# ModuleAngularTP3 — Module Champ d'Application (Angular JS)
+# ModuleAngularTP3 — Module Champ d'Application (Angular)
 
 **Étudiant :** Mohammad MOLOUDI  
 **Formation :** Master 2 CIM — ICOM, Université Lyon 2  
